@@ -60,4 +60,4 @@ def find_empty(bo):
             if bo[i][j] == 0:
                 return(i, j)
             
-    return Home
+    return None
