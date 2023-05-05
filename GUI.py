@@ -92,7 +92,7 @@ class Grid:
         else:
             return None
         
-    def is_fininshed(self):
+    def is_finished(self):
         for i in range(self.rows):
             for j in range(self.cols):
                 if self.cubes[i][j].value == 0:
@@ -161,7 +161,7 @@ class Cube:
         self.selected = False
         
     def draw(self, win):
-        fnt = pygame.font.SysFont("comicsans", 40)
+        fnt = pygame.font.SysFont("timesnewroman", 40)
         
         gap = self.width / 9
         x = self.col * gap
@@ -178,7 +178,7 @@ class Cube:
             pygame.draw.rect(win, (255, 0, 0), (x, y, gap, gap), 3)
             
     def draw_change(self, win, g = True):
-        fnt = pygame.font.SysFont("comicsans", 40)
+        fnt = pygame.font.SysFont("timesnewroman", 40)
         
         gap = self.width / 9
         x = self.col * gap
@@ -235,7 +235,7 @@ def valid(bo, num, pos):
 def redraw_window(win, board, time, strikes):
     win.fill((255,255,255))
     # Draw time
-    fnt = pygame.font.SysFont("comicsans", 40)
+    fnt = pygame.font.SysFont("timesnewroman", 40)
     text = fnt.render("Time: " + format_time(time), 1, (0,0,0))
     win.blit(text, (540 - 160, 560))
     # Draw Strikes
